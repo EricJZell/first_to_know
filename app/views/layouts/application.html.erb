@@ -9,7 +9,7 @@
   <div class="row">
     <%= render 'layouts/nav_bar' %>
     <%- flash.each do |key, value| -%>
-      <div class="flash flash-<%= key %>">
+      <div class="callout <%= key %>">
         <%= value %>
       </div>
     <%- end -%>
