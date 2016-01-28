@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    require_permission
     @users = User.all
   end
 end
