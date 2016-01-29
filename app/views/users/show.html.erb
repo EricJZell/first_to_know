@@ -1,5 +1,11 @@
 <h1>Welcome, <%= @user.email %>. This is your profile</h1>
-<ul class="menu">
-  <li><input type="search" placeholder="Search"></li>
-  <li><button type="button" class="button twitter-search">Search</button></li>
+<h3>Your Subscriptions:</h3>
+<ul class="subscriptions">
+  <% @user.subscriptions.each do |sub| %>
+    <div class="row">
+      <li class="subscription">
+        <%= "#{sub.twitter_handle}: #{sub.phrase}" %>
+      </li>
+    </div>
+  <% end %>
 </ul>

@@ -10,6 +10,18 @@ FactoryGirl.define do
       user_type "admin"
     end
 
+    factory :user_with_subscriptions do
+      after(:create) do |user|
+        FactoryGirl.create(:subscription, user: user)
+        FactoryGirl.create(:subscription, user: user)
+        FactoryGirl.create(:subscription, user: user)
+      end
+    end
   end
 
+  factory :subscription do
+    twitter_handle "hula_zell"
+    sequence(:phrase) { |n| "I like #{n} turtles" }
+    user
+  end
 end
