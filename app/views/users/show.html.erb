@@ -6,6 +6,7 @@
       <li class="subscription" id="<%= dom_id(sub)%>">
         <%= "#{sub.twitter_handle}: #{sub.phrase}" %>
         <%= link_to 'Edit', edit_user_subscription_path(@user, sub) %>
+        <%= link_to 'Delete', user_subscription_path(@user, sub), method: :delete %>
       </li>
     </div>
   <% end %>

@@ -34,6 +34,13 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def destroy
+    @subscription = Subscription.find(params[:id])
+    @subscription.destroy
+    flash[:success] = "Subscription deleted"
+    redirect_to :back
+  end
+
   protected
 
   def subscription_params
