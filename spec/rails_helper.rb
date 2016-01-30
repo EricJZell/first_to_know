@@ -18,6 +18,8 @@ RSpec.configure do |config|
 
   config.include UserSessionHelpers, type: :feature
 
+  config.include RailsDomIdHelper, type: :feature
+
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   config.use_transactional_fixtures = true

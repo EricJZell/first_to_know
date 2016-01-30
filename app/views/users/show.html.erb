@@ -3,8 +3,9 @@
 <ul class="subscriptions">
   <% @user.subscriptions.each do |sub| %>
     <div class="row">
-      <li class="subscription">
+      <li class="subscription" id="<%= dom_id(sub)%>">
         <%= "#{sub.twitter_handle}: #{sub.phrase}" %>
+        <%= link_to 'Edit', edit_user_subscription_path(@user, sub) %>
       </li>
     </div>
   <% end %>
