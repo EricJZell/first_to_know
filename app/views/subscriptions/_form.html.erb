@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-10 small-centered columns">
+    <h4>Enter subscription details below:</h4>
+    <%= form_for [@user, @subscription] do |f| %>
+      <div class="field">
+        <%= f.label :twitter_handle %>
+        <%= f.text_field :twitter_handle%><br />
+      </div>
+
+      <div class="field">
+        <%= f.label :phrase %>
+        <%= f.text_area :phrase %><br />
+      </div>
+
+      <div class="actions">
+        <%= f.submit class:"button" %>
+      </div>
+    <% end %>
+  </div>
+</div>
