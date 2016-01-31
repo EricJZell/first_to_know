@@ -12,4 +12,11 @@ namespace :twilio do
     )
   end
 
+  desc "Test crontab job"
+  task cron: :environment do
+    File.open('test_cron.txt', 'a') do |f|
+      f << "Hi, it's #{Time.now}\n"
+    end
+  end
+
 end
