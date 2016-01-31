@@ -32,8 +32,8 @@ namespace :twilio do
     result = twitter_client.friends
     result.each do |friend|
       CLIENT.messages.create(
-        from: '+14012878652',
-        to: '+14013328093',
+        from: ENV['TWILIO_PHONE_NUMBER'],
+        to: ENV['MY_PHONE_NUMBER'],
         body: "@#{friend.screen_name} tweets: #{friend.status.text}"
       )
     end
