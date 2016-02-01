@@ -6,6 +6,10 @@ class Subscription < ActiveRecord::Base
 
   before_save :downcase_phrase
 
+  def self.by_user(user)
+    where(twitter_handle: user)
+  end
+
   def downcase_phrase
     self.phrase = phrase.downcase
   end
