@@ -9,6 +9,7 @@ class SubscriptionsController < ApplicationController
     @user = User.find(params[:user_id])
     @subscription = @user.subscriptions.new(subscription_params)
     if @subscription.save
+      TWITTER_CLIENT.follow(@subscription.twitter_handle)
       flash[:success] = "New subscription added"
       redirect_to user_path(@user)
     else

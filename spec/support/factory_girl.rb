@@ -20,7 +20,7 @@ FactoryGirl.define do
   end
 
   factory :subscription do
-    twitter_handle "hula_zell"
+    twitter_handle "ez_codes"
     sequence(:phrase) { |n| "I like #{n} Turtles" }
     user
   end

@@ -11,7 +11,7 @@ feature 'create new subscription', %Q{
   scenario 'user enters valid subscription attributes' do
     sign_in(user)
     click_link "New Subscription"
-    fill_in "Twitter handle", with: "hula_zell"
+    fill_in "Twitter handle", with: "ez_codes"
     fill_in "Phrase", with: "Hello World"
     click_button "Create Subscription"
     expect(page).to have_content("New subscription added")
