@@ -6,8 +6,8 @@ namespace :twilio do
   task test: :environment do
 
     CLIENT.messages.create(
-      from: '+14012878652',
-      to: '+14013328093',
+      from: ENV['TWILIO_PHONE_NUMBER'],
+      to: ENV['MY_PHONE_NUMBER'],
       body: 'YO. I am a robot.'
     )
   end
@@ -19,7 +19,7 @@ namespace :twilio do
     end
   end
 
-  task monitor_tweets: :environment do
+  task scan_tweets: :environment do
     friends = TWITTER_CLIENT.friends
     friends.each do |friend|
       subscriptions = Subscription.by_user(friend.screen_name)
