@@ -30,6 +30,8 @@ gem 'pry'
 gem 'whenever', require: false
 
 gem 'twitter'
+
+gem 'phony_rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

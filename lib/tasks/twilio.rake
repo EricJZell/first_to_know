@@ -28,7 +28,7 @@ namespace :twilio do
           if friend.status.id > subscription.last_tweeted
             CLIENT.messages.create(
               from: ENV['TWILIO_PHONE_NUMBER'],
-              to: ENV['MY_PHONE_NUMBER'],
+              to: subscription.user.phone_number,
               body: "@#{friend.screen_name} tweets: #{friend.status.text}"
             )
             subscription.last_tweeted = friend.status.id
