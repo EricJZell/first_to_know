@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
     user_type == 'admin'
   end
 
+  def authorized?
+    AuthorizationToken.where(token: authorization_token).any?
+  end
+
 end
