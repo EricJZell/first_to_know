@@ -11,10 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160203044734) do
+ActiveRecord::Schema.define(version: 20160204034901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "authorization_tokens", force: :cascade do |t|
+    t.string "token", null: false
+  end
 
   create_table "subscriptions", force: :cascade do |t|
     t.integer "user_id",                              null: false
