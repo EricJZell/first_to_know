@@ -2,8 +2,10 @@
 ![Code Climate](https://codeclimate.com/github/EricJZell/first_to_know.png)
 ![Coverage Status](https://coveralls.io/repos/EricJZell/first_to_know/badge.png)
 
+[Visit First to Know!](https://first-to-know.herokuapp.com/)
+
 # First to Know
-First to Know is a web app where users can subscribe to recieve text message alerts the minute a selected twitter user tweets a certain phrase. For example, perhaps you want to be the first to know when Papa John's is giving away free pizza. You can create a subscription to Papa John's twitter account for the phrase 'free pizza'. The minute Papa John's tweets anything containing the string 'free pizza', a text message will be sent to the user's provided phone number. 
+First to Know is a web app where users can subscribe to recieve text message alerts the minute a selected twitter user tweets a certain phrase. For example, perhaps you want to be the first to know when Papa John's is giving away free pizza. You can create a subscription to Papa John's twitter account for the phrase 'free pizza'. The minute Papa John's tweets anything containing the string 'free pizza', a text message will be sent to the user's provided phone number.
 
 ## Technical Features
 - Built with Ruby on Rails
