@@ -32,6 +32,8 @@ gem 'whenever', require: false
 gem 'twitter'
 
 gem 'phony_rails'
+
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -67,3 +69,5 @@ gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails'
+
+ruby "2.2.2"
