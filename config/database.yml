@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: first_to_know_production
-  username: first_to_know
-  password: <%= ENV['FIRST_TO_KNOW_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
