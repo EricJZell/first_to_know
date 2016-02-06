@@ -11,7 +11,7 @@ feature 'user view thier profile', %Q{
     expect(page).to have_content('This is your profile')
     expect(page).to have_content('Sign Out')
     expect(page.all("li.subscription").size).to eq(user.subscriptions.count)
-    within("ul.subscriptions") do
+    within("ul.subscription-list") do
       expect(page).to have_content(user.subscriptions[0].phrase)
       expect(page).to have_content(user.subscriptions[1].phrase)
       expect(page).to have_content(user.subscriptions[2].phrase)
