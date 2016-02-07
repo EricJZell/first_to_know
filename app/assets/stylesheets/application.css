@@ -15,20 +15,38 @@
  *= require foundation_and_overrides
 
  */
-
+a {
+  color: #66757f;
+}
 .top-bar {
   margin-bottom: 20px;
-  border-bottom: 5px solid #999;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .content {
   background-color: #fff;
   border: 1px solid #e1e8ed;
   border-radius: 6px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   margin: 10px;
 }
 
 .subscription-list {
   list-style: none;
+}
+
+ul.subscription-list li {
+  border-bottom: 2px solid #e1e8ed;
+  margin: 20;
+  padding: 30px;
+}
+
+.menu > li.nav-link :hover {
+  padding-bottom: 6px;
+  border-bottom: 5px solid #1b95e0;
+}
+
+.logo {
+  max-height: 40px;
+  margin: 2px;
 }

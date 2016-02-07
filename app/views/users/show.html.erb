@@ -1,22 +1,21 @@
-<h1>Welcome, <%= @user.email %>. This is your profile</h1>
+<div class="column small-12 small-centered small-text-center">
+  Welcome, <%= @user.email %>. This is your profile
+</div>
 <div class="content">
-  <h3>Your Subscriptions:</h3>
-  <div class="row">
-    <div class="column small-4">Twitter Username:</div>
-    <div class="column small-4 end">Keyword or phrase:</div>
-  </div>
   <ul class="subscription-list">
+    <li>
+      <div class="column small-4"><strong>Twitter Username:</strong></div>
+      <div class="column small-4 end"><strong>Keyword or phrase:</strong></div>
+    </li>
     <% @user.subscriptions.each do |sub| %>
-      <div class="row">
-        <li class="subscription" id="<%= dom_id(sub)%>">
-          <div class="column small-4"><%= sub.twitter_handle %></div>
-          <div class="column small-4"><%= sub.phrase %></div>
-          <div class="column small-3 end">
-            <%= link_to 'Edit', edit_user_subscription_path(@user, sub) %>
-            <%= link_to 'Delete', user_subscription_path(@user, sub), method: :delete %>
-          </div>
-        </li>
-      </div>
+      <li class="subscription" id="<%= dom_id(sub)%>">
+        <div class="column small-4"><%= sub.twitter_handle %></div>
+        <div class="column small-4"><%= sub.phrase %></div>
+        <div class="column small-3 end">
+          <%= link_to 'Edit', edit_user_subscription_path(@user, sub) %>
+          <%= link_to 'Delete', user_subscription_path(@user, sub), method: :delete %>
+        </div>
+      </li>
     <% end %>
   </ul>
   <%= link_to "New Subscription", new_user_subscription_path(@user) %>
