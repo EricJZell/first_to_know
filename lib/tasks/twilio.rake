@@ -20,6 +20,7 @@ namespace :twilio do
   end
 
   task scan_tweets: :environment do
+    ActiveRecord::Base.logger.level = 1
     friends = TWITTER_CLIENT.friends
     friends.each do |friend|
       subscriptions = Subscription.by_user(friend.screen_name)
