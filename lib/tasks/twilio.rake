@@ -20,23 +20,6 @@ namespace :twilio do
   end
 
   task scan_tweets: :environment do
-    ActiveRecord::Base.logger.level = 1
-    friends = TWITTER_CLIENT.friends
-    friends.each do |friend|
-      subscriptions = Subscription.by_user(friend.screen_name)
-      subscriptions.each do |subscription|
-        if friend.status.text.downcase.include?(subscription.phrase)
-          if friend.status.id > subscription.last_tweeted
-            CLIENT.messages.create(
-              from: ENV['TWILIO_PHONE_NUMBER'],
-              to: subscription.user.phone_number,
-              body: "@#{friend.screen_name} tweets: #{friend.status.text}"
-            )
-            subscription.last_tweeted = friend.status.id
-            subscription.save
-          end
-        end
-      end
-    end
+    TwitterScan.new.call
   end
 end
