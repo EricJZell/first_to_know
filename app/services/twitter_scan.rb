@@ -11,7 +11,7 @@ class TwitterScan
       subscriptions.each do |subscription|
         if send_text?(friend, subscription)
           update_subscription(subscription, friend.status.id)
-          text_the_tweet(friend, subsciption)
+          text_the_tweet(friend, subscription)
         end
       end
     end
