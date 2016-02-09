@@ -9,17 +9,17 @@ class TwitterScan
     @friends.each do |friend|
       subscriptions = Subscription.by_user(friend.screen_name)
       subscriptions.each do |subscription|
-        if friend.status.text.downcase.include?(subscription.phrase)
-          if friend.status.id > subscription.last_tweeted
-            text_the_tweet(friend, subscription)
-            update_subscription(subscription, friend.status.id)
-          end
+        if send_text?(friend, subscription)
+          update_subscription(subscription, friend.status.id)
+          text_the_tweet(friend, subsciption)
         end
       end
     end
   end
 
-  private
+  def send_text?(friend, subscription)
+    friend.status.text.downcase.include?(subscription.phrase) && friend.status.id > subscription.last_tweeted
+  end
 
   def text_the_tweet(friend, subscription)
     CLIENT.messages.create(
