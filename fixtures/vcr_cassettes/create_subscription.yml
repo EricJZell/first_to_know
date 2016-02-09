@@ -1,0 +1,242 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/account/verify_credentials.json?skip_status=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="9ezY3Nqc5r5efWWtOCya8GRuS", oauth_nonce="774e16fd3ba0affe1126aab6e5d3c3c9",
+        oauth_signature="qed3r%2BAv4E5LXuO%2FAFI0%2F6k2Kf0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1454990239", oauth_token="1471081286-fXscCtqauyxMFJbGiQxVbMAomNFoI6xqUssNAyc",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '547'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A145499024014506572; Domain=.twitter.com; Path=/; Expires=Thu,
+        08-Feb-2018 03:57:20 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - f511ddc63e654685a881bf86c2394f08
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '10'
+      X-Rate-Limit-Reset:
+      - '1454990410'
+      X-Response-Time:
+      - '19'
+      X-Transaction:
+      - 8f78f57b441a850d
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      - BouncerExempt
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":1471081286,"id_str":"1471081286","name":"Eric Zell","screen_name":"hula_zell","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":4,"friends_count":3,"listed_count":0,"created_at":"Fri
+        May 31 01:47:10 +0000 2013","favourites_count":0,"utc_offset":-18000,"time_zone":"Eastern
+        Time (US & Canada)","geo_enabled":false,"verified":false,"statuses_count":1,"lang":"en","contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"C0DEED","profile_background_image_url":"http:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_image_url_https":"https:\/\/abs.twimg.com\/images\/themes\/theme1\/bg.png","profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_3_normal.png","profile_link_color":"0084B4","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":false,"follow_request_sent":false,"notifications":false}'
+    http_version: 
+  recorded_at: Tue, 09 Feb 2016 03:57:20 GMT
+- request:
+    method: post
+    uri: https://api.twitter.com/1.1/users/lookup.json
+    body:
+      encoding: UTF-8
+      string: screen_name=ez_codes
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="9ezY3Nqc5r5efWWtOCya8GRuS", oauth_nonce="48d270efe85b2fc8b949571aac2c57cb",
+        oauth_signature="OXm%2BM78eb1wj0e9U8mWV1DOLElg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1454990239", oauth_token="1471081286-fXscCtqauyxMFJbGiQxVbMAomNFoI6xqUssNAyc",
+        oauth_version="1.0"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '742'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A145499024014584018; Domain=.twitter.com; Path=/; Expires=Thu,
+        08-Feb-2018 03:57:20 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 25acb00e0f95991fb85a627d62c94cb6
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '180'
+      X-Rate-Limit-Remaining:
+      - '178'
+      X-Rate-Limit-Reset:
+      - '1454991015'
+      X-Response-Time:
+      - '37'
+      X-Transaction:
+      - 5265c079bb7a5eac
+      X-Tsa-Request-Body-Time:
+      - '3'
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":4852181048,"id_str":"4852181048","name":"Eric Zell","screen_name":"ez_codes","location":"","description":"","url":null,"entities":{"description":{"urls":[]}},"protected":false,"followers_count":1,"friends_count":3,"listed_count":0,"created_at":"Wed
+        Feb 03 03:35:28 +0000 2016","favourites_count":0,"utc_offset":null,"time_zone":null,"geo_enabled":false,"verified":false,"statuses_count":12,"lang":"en","status":{"created_at":"Mon
+        Feb 08 05:07:01 +0000 2016","id":696560846344945664,"id_str":"696560846344945664","text":"hello
+        world!","source":"\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter
+        Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"geo":null,"coordinates":null,"place":null,"contributors":null,"is_quote_status":false,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},"contributors_enabled":false,"is_translator":false,"is_translation_enabled":false,"profile_background_color":"F5F8FA","profile_background_image_url":null,"profile_background_image_url_https":null,"profile_background_tile":false,"profile_image_url":"http:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_image_url_https":"https:\/\/abs.twimg.com\/sticky\/default_profile_images\/default_profile_1_normal.png","profile_link_color":"2B7BB9","profile_sidebar_border_color":"C0DEED","profile_sidebar_fill_color":"DDEEF6","profile_text_color":"333333","profile_use_background_image":true,"has_extended_profile":false,"default_profile":true,"default_profile_image":true,"following":true,"follow_request_sent":false,"notifications":false}]'
+    http_version: 
+  recorded_at: Tue, 09 Feb 2016 03:57:20 GMT
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/friends/ids.json?cursor=-1&user_id=1471081286
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="9ezY3Nqc5r5efWWtOCya8GRuS", oauth_nonce="dca19aebf5a79c9b9b04980c34de866d",
+        oauth_signature="0H4yPL2I5D%2F2ZZorW3sDX5Dm34Y%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1454990240", oauth_token="1471081286-fXscCtqauyxMFJbGiQxVbMAomNFoI6xqUssNAyc",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Disposition:
+      - attachment; filename=json.json
+      Content-Length:
+      - '106'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Tue, 09 Feb 2016 03:57:20 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A145499024045560122; Domain=.twitter.com; Path=/; Expires=Thu,
+        08-Feb-2018 03:57:20 UTC
+      - lang=en; Path=/
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read-write
+      X-Connection-Hash:
+      - 4e872fa24a7c96cdaff7c95fcf0fde8d
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '15'
+      X-Rate-Limit-Remaining:
+      - '14'
+      X-Rate-Limit-Reset:
+      - '1454991140'
+      X-Response-Time:
+      - '17'
+      X-Transaction:
+      - 8d2689e830ff2c4f
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ids":[4852181048,22449367,29312953],"next_cursor":0,"next_cursor_str":"0","previous_cursor":0,"previous_cursor_str":"0"}'
+    http_version: 
+  recorded_at: Tue, 09 Feb 2016 03:57:20 GMT
+recorded_with: VCR 3.0.1

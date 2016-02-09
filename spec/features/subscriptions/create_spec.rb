@@ -13,7 +13,9 @@ feature 'create new subscription', %Q{
     click_link "New Subscription"
     fill_in "Twitter handle", with: "ez_codes"
     fill_in "Phrase", with: "Hello World"
-    click_button "Create Subscription"
+    VCR.use_cassette("create_subscription") do
+      click_button "Create Subscription"
+    end
     expect(page).to have_content("New subscription added")
   end
 
