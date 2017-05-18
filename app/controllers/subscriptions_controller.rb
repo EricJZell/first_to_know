@@ -45,6 +45,7 @@ class SubscriptionsController < ApplicationController
   protected
 
   def subscription_params
+    params[:subscription][:twitter_handle] = params[:subscription][:twitter_handle].sub(/^@/,'')
     params.require(:subscription).permit(:twitter_handle, :phrase)
   end
 
