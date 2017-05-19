@@ -1,4 +1,5 @@
 class TwitterScan
+  attr_reader :friends
 
   def initialize
     ActiveRecord::Base.logger.level = 1
@@ -6,7 +7,7 @@ class TwitterScan
   end
 
   def call
-    @friends.each do |friend|
+    friends.each do |friend|
       subscriptions = Subscription.by_user(friend.screen_name)
       subscriptions.each do |subscription|
         if send_text?(friend, subscription)
